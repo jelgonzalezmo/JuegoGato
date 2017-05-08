@@ -15,7 +15,7 @@ public class Main  {
     public static void main(String[] args) {
   TestPaintComponent frame=new TestPaintComponent();
   frame.setTitle("jhdgs");
-  frame.setSize(300, 300);
+  frame.setSize(800, 500);
   frame.setLocationRelativeTo(null);
   frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
    frame.setVisible(true);
