@@ -8,6 +8,7 @@ package Ejercicioenclase;
 import java.awt.Color;
 import javax.swing.*;
 import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
@@ -38,26 +39,30 @@ private int a=20;
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+        Image fondo= loadImage("fondo.png");
+        g.drawImage(fondo, 0, 0, null);
       
-        g.drawRect(x, 90,80 ,50 );//dos primeras posiciones, sigyuiente tamaño 
-        g.drawRoundRect(x+10, 140, 20, 20, 20, 20);
-        g.drawRoundRect(x+60, 140, 20, 20, 20, 20);
-        g.drawRect(x+70, 110, 40, 10);
-        g.drawRect(x+20, 10, 10, 20);
-        g.drawRect(x+90, 10, 10, 20);
-       
+        g.fillRect(x, 390,80 ,50 );//dos primeras posiciones, sigyuiente tamaño 
+        g.drawRoundRect(x+10, 440, 20, 20, 20, 20);
+        g.drawRoundRect(x+60, 440, 20, 20, 20, 20);
+        g.drawRect(x+70, 410, 40, 10);
+        g.drawRect(x+20, 310, 10, 20);
+        g.drawRect(x+90, 310, 10, 20);
+       g.setColor(Color.black);
         //dos
         int m=x+130;
         //dos primeras posiciones, siguiente es el tamaño 
-        g.drawRect(m+150, 140, 20, 20);
-        g.drawRoundRect(m+60, 60, 20, 20, 20, 20);
+        g.drawRect(m+150, 440, 20, 20);
+        g.drawRoundRect(m+60, 460, 20, 20, 20, 20);
         g.drawString("puntos=xxx", 200, 10);
-        
+        g.drawRect(170, 420, 40, 10);
+     g.setColor(Color.YELLOW);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
        x+=1;
+       DetectarColision();
        repaint();
     }
 
@@ -70,7 +75,15 @@ private int a=20;
     }
 
     public Rectangle getBounds(){
-    return new Rectangle (x,90,80,50);
+    return new Rectangle (x-5, 390,90 ,50);
+        }
+        
+    public void DetectarColision(){
+    Rectangle tanque= getBounds();
+    Rectangle objeto =new Rectangle(170, 420, 40, 10);
+       if (tanque.intersects(objeto)){
+       timer.stop();
+       }
     }
     
     @Override
@@ -88,4 +101,13 @@ private int a=20;
     @Override
     public void mouseExited(MouseEvent e) {
          }
+
+public Image loadImage (String imageName){
+ImageIcon ii=new ImageIcon(imageName);
+Image image=ii.getImage();
+return image;
 }
+
+}
+
+
