@@ -26,6 +26,7 @@ public class NewPanel extends JPanel implements ActionListener, MouseListener{
 private int x;
 private Timer timer;
 private int a=20;
+private int secuencia=0;
 //clic repetido
     private final Color color;
 
@@ -41,8 +42,11 @@ private int a=20;
         super.paintComponent(g);
         Image fondo= loadImage("fondo.png");
         g.drawImage(fondo, 0, 0, null);
+        Image hombresitos =loadImage("free_radical_game_sprites.png"); 
+        g.drawImage(hombresitos, x, 320, x+32,320+32,192+(this.secuencia*32),192,192+(this.secuencia*32)+32,192+32,this) ;
+        
       
-        g.fillRect(x, 390,80 ,50 );//dos primeras posiciones, sigyuiente tamaño 
+       /* g.fillRect(x, 390,80 ,50);//dos primeras posiciones, sigyuiente tamaño 
         g.drawRoundRect(x+10, 440, 20, 20, 20, 20);
         g.drawRoundRect(x+60, 440, 20, 20, 20, 20);
         g.drawRect(x+70, 410, 40, 10);
@@ -56,13 +60,17 @@ private int a=20;
         g.drawRoundRect(m+60, 460, 20, 20, 20, 20);
         g.drawString("puntos=xxx", 200, 10);
         g.drawRect(170, 420, 40, 10);
-     g.setColor(Color.YELLOW);
+     g.setColor(Color.YELLOW);*/
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-       x+=1;
-       DetectarColision();
+       x+=2;
+             //DetectarColision();
+       if(this.secuencia==2){
+       this.secuencia=0;}
+       else
+           this.secuencia++;
        repaint();
     }
 
