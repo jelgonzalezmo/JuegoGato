@@ -43,7 +43,7 @@ private int secuencia=0;
         Image fondo= loadImage("fondo.png");
         g.drawImage(fondo, 0, 0, null);
         Image hombresitos =loadImage("free_radical_game_sprites.png"); 
-        g.drawImage(hombresitos, x, 320, x+32,320+32,192+(this.secuencia*32),192,192+(this.secuencia*32)+32,192+32,this) ;
+        g.drawImage(hombresitos, x, 380, x+45,380+45,192+(this.secuencia*32),192,192+(this.secuencia*32)+32,192+32,this) ;
         
       
        /* g.fillRect(x, 390,80 ,50);//dos primeras posiciones, sigyuiente tamaño 
