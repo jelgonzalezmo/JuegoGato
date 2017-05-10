@@ -48,7 +48,7 @@ public NewPanel1() throws Exception {
         g.drawImage(fondo, x, y, x+22, y+800,  (this.secuencia * 22), 800, (this.secuencia * 22) + 22, 800, this);
         //Image heroe = loadImage("walking.png");
         //g.drawImage(heroe, 0, 0, null);
-
+//ciclo
     }
 
     @Override
