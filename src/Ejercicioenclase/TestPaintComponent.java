@@ -11,7 +11,7 @@ import java.awt.Graphics;
  * @author Estudiante
  */
 public class TestPaintComponent extends JFrame {
-    public TestPaintComponent (){
+    public TestPaintComponent () throws Exception{
     add(new NewPanel());
     } 
 }

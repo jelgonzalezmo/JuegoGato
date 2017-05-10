@@ -4,18 +4,15 @@
  * and open the template in the editor.
  */
 package juegoclase2017;
-
+import javax.swing.*;
+import java.awt.Graphics;
+/**
 /**
  *
- * @author Isabel-Fabian
+ * @author Estudiante
  */
-public class JuegoClase2017 {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+public class TestPaintComponent1 extends JFrame {
+     public TestPaintComponent1 () throws Exception {
+        add(new NewPanel1());
+    } 
 }

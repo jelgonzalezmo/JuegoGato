@@ -3,24 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Ejercicioenclase;
+package juegoclase2017;
+
 import javax.swing.JFrame;
 import java.awt.Graphics;
+
 /**
  *
  * @author Estudiante
  */
-public class Main  {
-   
+public class Main1 {
+
     public static void main(String[] args) throws Exception {
-  TestPaintComponent frame=new TestPaintComponent();
-  frame.setTitle("hombresito");
-  frame.setSize(800, 500);
-  frame.setLocationRelativeTo(null);
-  frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-   frame.setVisible(true);
-    
-    
-    
+        TestPaintComponent1 juego = new TestPaintComponent1();
+        juego.setTitle("Juego");
+        juego.setSize(800, 500);
+        juego.setLocationRelativeTo(null);
+        juego.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        juego.setVisible(true);
     }
+
 }
